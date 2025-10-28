@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "price": 599,
+        "category": "fiction",
+        "bestseller": true,
+        "image": "assets/harry potter.jpeg",
+        "description": "Harry Potter's life is miserable. His parents are dead and he's stuck with his heartless relatives, who force him to live in a tiny closet under the stairs. But his fortune changes when he receives a letter that tells him the truth about himself: he's a wizard. A mysterious visitor rescues him from his relatives and takes him to Hogwarts School of Witchcraft and Wizardry, where he finds not only friends, aerial sports, and magic in everything from classes to meals, but a great destiny that's been waiting for him... if Harry can survive the encounter.",
+        "pages": 309,
+        "publisher": "Scholastic"
+    },
+    {
+        "id": 2,
+        "title": "The Book of Names",
+        "author": "Jill Gregory & Karen Tintori",
+        "price": 799,
+        "category": "fiction",
+        "bestseller": false,
+        "image": "assets/the book of names.jpeg",
+        "description": "An ancient manuscript holds the key to humanity's survival. When a young woman discovers she is the keeper of the 36 righteous souls who sustain the world, she must protect the sacred Book of Names from those who would destroy it. A thrilling blend of mysticism, adventure, and ancient prophecy that spans continents and centuries. This gripping tale weaves together Jewish folklore with modern-day suspense.",
+        "pages": 384,
+        "publisher": "Forge Books"
+    },
+    {
+        "id": 3,
+        "title": "The Book of Ile-Rien",
+        "author": "Martha Wells",
+        "price": 899,
+        "category": "fiction",
+        "bestseller": true,
+        "image": "assets/the book of ile-rien.jpeg",
+        "description": "In a world where magic and technology coexist, the kingdom of Ile-Rien faces its greatest threat. When mysterious spheres begin appearing and stealing the souls of sorcerers, a resourceful young woman must journey through parallel worlds to save her homeland. This epic fantasy trilogy combines intricate world-building, compelling characters, and adventure that spans multiple dimensions. A masterwork of imaginative fiction.",
+        "pages": 1200,
+        "publisher": "HarperCollins"
+    },
+    {
+        "id": 4,
+        "title": "The Will of the Many",
+        "author": "James Islington",
+        "price": 1299,
+        "category": "fiction",
+        "bestseller": false,
+        "image": "assets/the will of the many.jpeg",
+        "description": "In a world where hierarchy is determined by the ability to lend one's willpower to those above, a young orphan hides a dangerous secret. As he infiltrates the most prestigious academy to uncover the truth about his past, he discovers a conspiracy that threatens the very foundation of society. An epic tale of power, sacrifice, and rebellion that will keep you on the edge of your seat. Perfect for fans of dark fantasy and political intrigue.",
+        "pages": 624,
+        "publisher": "Saga Press"
+    },
+    {
+        "id": 5,
+        "title": "The Awesome Book of Words",
+        "author": "Various Authors",
+        "price": 449,
+        "category": "children",
+        "bestseller": true,
+        "image": "assets/the awesome book of words.jpeg",
+        "description": "A delightful journey through the world of words for young readers! This colorful and engaging book introduces children to the magic of language through fun activities, interesting facts, and beautiful illustrations. From synonyms to homonyms, from simple words to complex vocabulary, this book makes learning an adventure. Perfect for building vocabulary and fostering a love of reading in children ages 6-10.",
+        "pages": 128,
+        "publisher": "DK Children"
+    },
+    {
+        "id": 6,
+        "title": "The Psychology of Money",
+        "author": "Morgan Housel",
+        "price": 699,
+        "category": "non-fiction",
+        "bestseller": false,
+        "image": "assets/the psychology of money.jpeg",
+        "description": "Doing well with money isn't necessarily about what you know. It's about how you behave. And behavior is hard to teach, even to really smart people. This book explores the strange ways people think about money and teaches you how to make better sense of one of life's most important topics. Through 19 short stories, Morgan Housel shares timeless lessons on wealth, greed, and happiness that will change the way you think about money.",
+        "pages": 256,
+        "publisher": "Harriman House"
+    },
+    {
+        "id": 7,
+        "title": "Breadcrumbs",
+        "author": "Anne Ursu",
+        "price": 549,
+        "category": "children",
+        "bestseller": true,
+        "image": "assets/breadcrumbs.jpeg",
+        "description": "Once upon a time, Hazel and Jack were best friends. But that was before he stopped talking to her and disappeared into the woods with a mysterious woman. Now it's up to Hazel to go in after him. Inspired by Hans Christian Andersen's 'The Snow Queen,' this modern fairy tale is a beautiful exploration of friendship, growing up, and the power of stories. A heartwarming adventure for middle-grade readers.",
+        "pages": 312,
+        "publisher": "Walden Pond Press"
+    },
+    {
+        "id": 8,
+        "title": "You Become What You Think",
+        "author": "Shubham Kumar Singh",
+        "price": 399,
+        "category": "non-fiction",
+        "bestseller": false,
+        "image": "assets/you become what you think.jpeg",
+        "description": "A transformative guide to harnessing the power of your thoughts to shape your destiny. This book reveals how your mindset determines your success, happiness, and overall life experience. Through practical exercises, real-life examples, and ancient wisdom combined with modern psychology, learn to reprogram your thinking patterns and create the life you desire. Essential reading for anyone seeking personal growth and positive transformation.",
+        "pages": 224,
+        "publisher": "Self-Published"
+    },
+    {
+        "id": 9,
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "price": 629,
+        "category": "non-fiction",
+        "bestseller": true,
+        "image": "assets/atomic habits.jpeg",
+        "description": "No matter your goals, Atomic Habits offers a proven framework for improving every day. James Clear reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results. If you're having trouble changing your habits, the problem isn't you. The problem is your system. This book will reshape the way you think about progress and success.",
+        "pages": 320,
+        "publisher": "Avery"
+    },
+    {
+        "id": 10,
+        "title": "The Ultimate True Crime Puzzle Book",
+        "author": "Jack Rosewood",
+        "price": 799,
+        "category": "academic",
+        "bestseller": false,
+        "image": "assets/the ultimate true crime.jpeg",
+        "description": "Test your detective skills with this collection of real-life crime mysteries! Each case presents you with clues, evidence, and witness statements. Can you solve the crime before revealing the answer? From theft to murder, these puzzling cases will challenge your analytical thinking and deductive reasoning. Perfect for true crime enthusiasts and puzzle lovers alike. Includes 50+ cases with detailed solutions and fascinating background information.",
+        "pages": 288,
+        "publisher": "True Crime Press"
+    }
+]

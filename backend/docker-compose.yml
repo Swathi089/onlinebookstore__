@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:6
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+  backend:
+    build: ./backend
+    restart: always
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/crossword_db
+      - JWT_SECRET=devsecret
+      - STRIPE_SECRET_KEY=sk_test_xxx
+      - FRONTEND_URL=http://localhost:5500
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
