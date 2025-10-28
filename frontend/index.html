@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="config.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>Crossword-Online Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Crossword</h1>
+                <span class="tagline">Books & More</span>
+            </div>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#books">Books</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#bestsellers">Bestsellers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search books, authors...">
+                    <button id="searchBtn">🔍</button>
+                </div>
+                
+                <!-- Auth buttons (shown when not logged in) -->
+                <div class="auth-buttons" id="authButtons">
+                    <button class="auth-btn" id="loginBtn">Login</button>
+                    <button class="auth-btn signup" id="signupBtn">Sign Up</button>
+                </div>
+                
+                <!-- User profile (shown when logged in) -->
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <div class="profile-icon" id="profileIcon">
+                        <span id="userInitial">U</span>
+                    </div>
+                    <div class="profile-dropdown" id="profileDropdown">
+                        <div class="profile-header">
+                            <div class="profile-avatar">
+                                <span id="dropdownInitial">U</span>
+                            </div>
+                            <div class="profile-info">
+                                <h4 id="userName">User Name</h4>
+                                <p id="userEmail">user@email.com</p>
+                            </div>
+                        </div>
+                        <div class="profile-menu">
+                            <a href="#" id="editProfileBtn">✏️ Edit Profile</a>
+                            <a href="#" id="myOrdersBtn">📦 My Orders</a>
+                            <a href="#" id="logoutBtn" class="logout">🚪 Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cart">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <p class="form-switch">Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Create Your Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <p class="form-switch">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <span class="close" id="closeEditProfile">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label for="editName">Full Name</label>
+                    <input type="text" id="editName" required>
+                </div>
+                <div class="form-group">
+                    <label for="editEmail">Email</label>
+                    <input type="email" id="editEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="editPhone">Phone Number</label>
+                    <input type="tel" id="editPhone">
+                </div>
+                <div class="form-group">
+                    <label for="editAddress">Address</label>
+                    <textarea id="editAddress" rows="3"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- My Orders Modal -->
+    <div class="modal" id="myOrdersModal">
+        <div class="modal-content" style="max-width: 800px;">
+            <span class="close" id="closeMyOrders">&times;</span>
+            <h2>My Orders</h2>
+            <div id="ordersContainer" style="max-height: 500px; overflow-y: auto;">
+                <!-- Orders will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Discover Your Next Great Read</h2>
+            <p>Explore thousands of books across all genres</p>
+            <button class="cta-btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2>Browse by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="fiction">
+                    <h3>Fiction</h3>
+                    <p>Novels, Short Stories & More</p>
+                </div>
+                <div class="category-card" data-category="non-fiction">
+                    <h3>Non-Fiction</h3>
+                    <p>Biography, History & Science</p>
+                </div>
+                <div class="category-card" data-category="children">
+                    <h3>Children's Books</h3>
+                    <p>Stories for Young Readers</p>
+                </div>
+                <div class="category-card" data-category="academic">
+                    <h3>Academic</h3>
+                    <p>Textbooks & Reference</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section class="featured-books" id="books">
+        <div class="container">
+            <h2>Featured Books</h2>
+            <div class="books-grid" id="booksGrid">
+                <!-- Books will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bestsellers Section -->
+    <section class="bestsellers" id="bestsellers">
+        <div class="container">
+            <h2>Bestsellers This Month</h2>
+            <div class="bestseller-slider">
+                <div class="bestseller-track" id="bestsellerTrack">
+                    <!-- Bestsellers will be populated by JavaScript -->
+                </div>
+                <button class="slider-btn prev" id="prevBtn">‹</button>
+                <button class="slider-btn next" id="nextBtn">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Get the latest book recommendations and exclusive offers</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Crossword</h3>
+                    <p>Your trusted online bookstore since 1992</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#books">Books</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#bestsellers">Bestsellers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#">📘 Facebook</a>
+                        <a href="#">🐦 Twitter</a>
+                        <a href="#">📷 Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Crossword Bookstore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
